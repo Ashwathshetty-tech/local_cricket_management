@@ -1,1 +1,35 @@
-<p>login works!</p>
+<div class="container-fluid">
+<div class="bg-img">
+  <mat-card>
+    <mat-card-content>
+      <h4>LOGIN</h4>
+
+        <form (submit)="onSubmit(loginForm)">
+          <div [formGroup]="loginForm">
+          <mat-form-field class="full-width-input">
+
+              <input matInput formControlName="name" placeholder="User name" required>
+          </mat-form-field>
+
+
+
+
+
+          <mat-form-field class="full-width-input">
+                <input type="password" matInput formControlName="password" placeholder="Password" required>
+              </mat-form-field>
+              <br>
+              <br>
+
+                <!-- <button mat-raised-button color="primary" type="button" (click)="resetForm(loginForm)">Reset</button> -->
+                <button mat-raised-button class="signin" color="accent" type="submit" [disabled]="!loginForm.valid">Sign in</button>
+                <!-- <p class="tip signup-tip">
+                  <span>Don't have an account?</span>
+                  <a (click)="signUp()">Sign up</a>
+              </p> -->
+            </div>
+          </form>
+        </mat-card-content>
+        </mat-card>
+</div>
+</div>
