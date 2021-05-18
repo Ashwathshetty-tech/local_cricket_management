@@ -1,0 +1,34 @@
+.left,.right{
+  min-height: 100vh;
+}
+/* .left{
+  background-color: yellow;
+} */
+/* .formwrapper{
+  border: solid 1px red;
+} */
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+/* td {
+  padding-right: 15px;
+} */
+.signup{
+  width: 100%;
+  border-radius: 3px;
+  background: crimson;
+  height: 44px;
+}
+.left-img {
+  background-image: url("../../../assets/halli_cricket_image.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  position: fixed;
+  width: 25%;
+}
