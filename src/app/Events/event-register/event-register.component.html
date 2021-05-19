@@ -8,7 +8,7 @@
     <div class="col-9 right">
       <h4 class="pt-3 text-center">Register the event to get more participants</h4>
       <div class="formwrapper px-5">
-        <form class="form-example" (submit)="onSubmit(eventForm)">
+        <form class="form-example" (ngSubmit)="onSubmit(eventForm)">
           <div [formGroup]="eventForm">
             <mat-form-field class="example-full-width">
               <input matInput placeholder="Event Name" formControlName="name" autocomplete="off">

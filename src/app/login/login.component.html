@@ -3,21 +3,14 @@
   <mat-card>
     <mat-card-content>
       <h4>LOGIN</h4>
-
-        <form (submit)="onSubmit(loginForm)">
+        <form (ngSubmit)="onSubmit(loginForm)">
           <div [formGroup]="loginForm">
           <mat-form-field class="full-width-input">
-
               <input matInput formControlName="name" placeholder="User name" required>
           </mat-form-field>
-
-
-
-
-
           <mat-form-field class="full-width-input">
-                <input type="password" matInput formControlName="password" placeholder="Password" required>
-              </mat-form-field>
+             <input type="password" matInput formControlName="password" placeholder="Password" required>
+          </mat-form-field>
               <br>
               <br>
 
@@ -29,7 +22,7 @@
               </p> -->
             </div>
           </form>
-        </mat-card-content>
-        </mat-card>
+    </mat-card-content>
+ </mat-card>
 </div>
 </div>
