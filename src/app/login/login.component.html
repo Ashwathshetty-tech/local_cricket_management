@@ -3,7 +3,7 @@
   <mat-card>
     <mat-card-content>
       <h4>LOGIN</h4>
-        <form (ngSubmit)="onSubmit(loginForm)">
+        <form>
           <div [formGroup]="loginForm">
           <mat-form-field class="full-width-input">
               <input matInput formControlName="name" placeholder="User name" required>
@@ -26,3 +26,4 @@
  </mat-card>
 </div>
 </div>
+<!-- (ngSubmit)="onSubmit(loginForm)" -->
