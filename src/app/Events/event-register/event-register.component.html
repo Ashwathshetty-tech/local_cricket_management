@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="row">
+  <div class="row no-gutters">
     <div class="col-3 left">
       <div class="left-img">
 
@@ -11,37 +11,37 @@
         <form class="form-example" (submit)="onSubmit(eventForm)">
           <div [formGroup]="eventForm">
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Event Name" formControlName="name">
+              <input matInput placeholder="Event Name" formControlName="name" autocomplete="off">
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Event Organizer" formControlName="organizer">
+              <input matInput placeholder="Event Organizer" formControlName="organizer" autocomplete="off">
             </mat-form-field>
             <table class="example-full-width" cellspacing="0"><tr>
               <td><mat-form-field class="example-full-width">
-                <input matInput placeholder="Place of Event" formControlName="place">
+                <input matInput placeholder="Place of Event" formControlName="place" autocomplete="off">
               </mat-form-field></td>
               <td><mat-form-field class="example-full-width">
                 <span matPrefix>+91 &nbsp;</span>
-                <input type="tel" matInput placeholder="Telephone" formControlName="contact">
+                <input type="tel" matInput placeholder="Telephone" formControlName="contact" autocomplete="off">
                 <mat-icon matSuffix>phone</mat-icon>
               </mat-form-field></td>
             </tr></table>
 
             <table class="example-full-width" cellspacing="0"><tr>
               <td><mat-form-field class="example-full-width">
-                <input matInput [min]="minDate" [matDatepicker]="picker" placeholder="Start Date" formControlName="startDate">
+                <input matInput [min]="minDate" [matDatepicker]="picker" placeholder="Start Date" formControlName="startDate" autocomplete="off">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
               </mat-form-field></td>
               <td><mat-form-field class="example-full-width">
-                <input matInput [min]="minDate" [matDatepicker]="picker1" placeholder="End date" formControlName="endDate">
+                <input matInput [min]="minDate" [matDatepicker]="picker1" placeholder="End date" formControlName="endDate" autocomplete="off">
                 <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                 <mat-datepicker #picker1></mat-datepicker>
               </mat-form-field></td>
             </tr></table>
             <mat-form-field class="example-full-width">
               <input matInput placeholder="Email" formControlName="emailFormControl"
-                      required>
+                      required autocomplete="off">
               <!-- <mat-hint>Errors appear instantly!</mat-hint>
               <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                 Please enter a valid email address
@@ -53,7 +53,7 @@
               <!-- <label for="file">Choose File to Upload Poster</label> -->
               <input type="file"
                      id="file"
-                     (change)="handleFileInput($event)" formControlName="poster" required>
+                     (change)="handleFileInput($event)" formControlName="poster" required autocomplete="off">
 
 
           </div>
