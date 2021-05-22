@@ -7,6 +7,7 @@ import { EventDetailsComponent } from './Events/event-details/event-details.comp
 
 
 
+
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'eventDetails',component:EventDetailsComponent},

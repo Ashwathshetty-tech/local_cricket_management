@@ -32,17 +32,32 @@
   position: fixed;
   width: 25%;
 }
-::ng-deep .mat-focused .mat-form-field-label {
-  /*change color of label*/
-  color: green !important;
- }
-
- ::ng-deep.mat-form-field-underline {
-  /*change color of underline*/
-  background-color: green !important;
+mat-card {
+  max-width: 60%;
+  margin: 2em auto;
+  text-align: center;
+  top: 50px;
+  background-color: white;
 }
-
-::ng-deep.mat-form-field-ripple {
- /*change color of underline when focused*/
- background-color: green !important;;
+.bg-color {
+  background-image: url("../../../assets/search-background-img.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+}
+.close {
+  color: #888888;
+  position: absolute;
+  float: right;
+  font-size: 40px;
+  font-weight: 400;
+  right: 30px;
+  top: 5px;
+}
+.close:hover,
+.close:focus {
+  color: #888888;
+  text-decoration: none;
+  cursor: pointer;
 }

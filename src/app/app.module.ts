@@ -8,7 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { EventRegisterComponent } from './Events/event-register/event-register.component';
 import { EventDetailsComponent } from './Events/event-details/event-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {DemoMaterialModule} from './material.module'
+import {DemoMaterialModule} from './material.module';
 
 @NgModule({
   declarations: [

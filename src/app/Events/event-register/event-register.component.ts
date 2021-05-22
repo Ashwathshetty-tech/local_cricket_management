@@ -65,5 +65,9 @@ export class EventRegisterComponent implements OnInit {
       };
       reader.readAsDataURL(file);
     }
+
+}
+Back(){
+  this.route.navigate(['/eventDetails']);
 }
 }
