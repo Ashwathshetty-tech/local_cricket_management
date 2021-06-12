@@ -18,6 +18,6 @@ export class LoginComponent implements OnInit {
   }
   onSubmit(){
     console.log("login",this.loginForm.value);
-    this.route.navigate(['/eventDetails']);
+    this.route.navigate(['/admin']);
   }
 }

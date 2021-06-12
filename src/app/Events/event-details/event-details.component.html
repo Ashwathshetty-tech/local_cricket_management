@@ -2,8 +2,8 @@
   <table class="example-full-width" cellspacing="0"><tr>
     <td>
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Search for event" [(value)]="searchText" (keypress)="onKeypressEvent($event)" />
-
+        <input matInput placeholder="Search for event" [(ngModel)]="searchText" (input)="onKeypressEvent($event)" />
+        {{searchText}}
 
 
       </mat-form-field></td>
@@ -36,7 +36,7 @@
       <mat-card-title>{{event.eventName}}</mat-card-title>
       <mat-card-subtitle>{{event.organizer}}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image class="s-image" src={{event.url}} alt="Photo of a Shiba Inu" (click)="openModal(event.url)">
+    <img mat-card-image class="s-image" src="{{event.poster}}" alt="Photo of a Shiba Inu" (click)="openModal(event.poster)">
     <div id="imgModal" class="slide-modal">
       <span class="close cursor" (click)="closeModal()">&times;</span>
       <div class="slide-modal-content">
