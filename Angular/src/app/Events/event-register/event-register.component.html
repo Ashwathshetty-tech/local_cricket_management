@@ -1,0 +1,97 @@
+<div class="bg-color">
+
+      <mat-card>
+        <mat-card-content>
+          <span class="close cursor" (click)="Back()">&times;</span>
+          <h5 class="text-center">Register the event to get more participants</h5>
+          <div class="formwrapper px-5">
+            <form class="form-example" (submit)="onSubmit(eventForm)">
+              <div [formGroup]="eventForm">
+                <input type="hidden" formControlName="approval">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Event Name" formControlName="eventName" autocomplete="off">
+                  <mat-error *ngIf="eventForm.get('eventName').hasError('required')&&(eventForm.get('eventName').dirty||eventForm.get('eventName').touched)">
+                    {{Errors.eventrReqError}}
+                    </mat-error>
+                </mat-form-field>
+                <table class="example-full-width" cellspacing="0"><tr>
+                  <td><mat-form-field class="example-full-width">
+                    <input matInput placeholder="Event Organizer" formControlName="organizer" autocomplete="off">
+                    <mat-error *ngIf="eventForm.get('organizer').hasError('required')&&(eventForm.get('organizer').dirty||eventForm.get('organizer').touched)">
+                      {{Errors.organizerReqError}}
+                      </mat-error>
+                  </mat-form-field></td>
+                  <td><mat-form-field class="example-full-width">
+                    <input matInput placeholder="Place of Event" formControlName="place" autocomplete="off">
+                    <mat-error *ngIf="eventForm.get('place').hasError('place')&&(eventForm.get('place').dirty||eventForm.get('place').touched)">
+                      {{Errors.placeReqError}}
+                      </mat-error>
+                  </mat-form-field></td>
+                </tr></table>
+
+                <table class="example-full-width" cellspacing="0"><tr>
+
+                  <td><mat-form-field class="example-full-width">
+                    <span matPrefix>+91 &nbsp;</span>
+                    <input type="tel" matInput placeholder="Telephone" formControlName="contact" autocomplete="off">
+                    <mat-icon matSuffix>phone</mat-icon>
+                    <mat-error *ngIf="eventForm.get('contact').hasError('required')&&(eventForm.get('contact').dirty||eventForm.get('contact').touched)">
+                      {{Errors.contactReqError}}
+                      </mat-error>
+                  </mat-form-field>
+                  </td>
+                  <td><mat-form-field class="example-full-width">
+
+                    <input matInput placeholder="Email" formControlName="email"
+                             autocomplete="off">
+
+                  </mat-form-field></td>
+                </tr></table>
+
+                <table class="example-full-width" cellspacing="0"><tr>
+                  <td><mat-form-field class="example-full-width">
+                    <input matInput [min]="minDate" [matDatepicker]="picker" placeholder="Start Date" formControlName="startDate" autocomplete="off">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field></td>
+                  <td><mat-form-field class="example-full-width">
+                    <input matInput [min]="minDate" [matDatepicker]="picker1" placeholder="End date" formControlName="endDate" autocomplete="off">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                  </mat-form-field></td>
+
+                </tr></table>
+                <table class="example-full-width" cellspacing="0"><tr>
+                  <td><mat-form-field class="example-full-width">
+                    <input matInput placeholder="Entry" formControlName="entry" autocomplete="off">
+
+                    <mat-error *ngIf="eventForm.get('entry').hasError('required')&&(eventForm.get('entry').dirty||eventForm.get('entry').touched)">
+                    {{Errors.entryrReqError}}
+                    </mat-error>
+                    <mat-error *ngIf="eventForm.get('entry').hasError('pattern')">
+                    {{Errors.entryValidError}}
+                    </mat-error>
+                  </mat-form-field></td>
+                  <td><mat-form-field class="example-full-width">
+                    <input matInput placeholder="Winning" formControlName="winning" autocomplete="off">
+                    <mat-error *ngIf="eventForm.get('winning').hasError('required')&&(eventForm.get('winning').dirty||eventForm.get('winning').touched)">
+                      {{Errors.winningReqError}}
+                     </mat-error>
+                     <mat-error *ngIf="eventForm.get('winning').hasError('pattern')">
+                      {{Errors.winningValidErrorr}}
+                     </mat-error>
+                  </mat-form-field></td>
+                </tr>
+                </table>
+                  <input type="file"
+                         id="file"
+                         (change)="handleFileInput($event)" formControlName="poster" required autocomplete="off">
+
+
+              </div>
+              <button mat-raised-button class="signup mt-3" type="submit" [disabled]="!eventForm.valid" style="color: blue;width:50%">Register Event</button>
+            </form>
+            </div>
+        </mat-card-content>
+      </mat-card>
+</div>
